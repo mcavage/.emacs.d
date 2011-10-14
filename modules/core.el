@@ -72,25 +72,56 @@ the curson at its beginning, according to the current mode."
   (next-line 1)
   (indent-according-to-mode))
 
-;; mimic popular IDEs binding, note that it doesn't work in a terminal session
-(global-set-key [(shift return)] 'insert-empty-line)
+(defun move-line (n)
+  "Move the current line up or down by N lines."
+  (interactive "p")
+  (setq col (current-column))
+  (beginning-of-line) (setq start (point))
+  (end-of-line) (forward-char) (setq end (point))
+  (let ((line-text (delete-and-extract-region start end)))
+    (forward-line n)
+    (insert line-text)
+    ;; restore point to original column in moved line
+    (forward-line -1)
+    (forward-char col)))
 
-(defun move-line-up ()
-  "Move up the current line."
-  (interactive)
-  (transpose-lines 1)
-  (previous-line 2))
+(defun move-line-up (n)
+  "Move the current line up by N lines."
+  (interactive "p")
+  (move-line (if (null n) -1 (- n))))
 
-(global-set-key [(control shift up)] 'move-line-up)
+(defun move-line-down (n)
+  "Move the current line down by N lines."
+  (interactive "p")
+  (move-line (if (null n) 1 n)))
 
-(defun move-line-down ()
-  "Move down the current line."
-  (interactive)
-  (next-line 1)
-  (transpose-lines 1)
-  (previous-line 1))
+(defun move-region (start end n)
+  "Move the current region up or down by N lines."
+  (interactive "r\np")
+  (let ((line-text (delete-and-extract-region start end)))
+    (forward-line n)
+    (let ((start (point)))
+      (insert line-text)
+      (setq deactivate-mark nil)
+      (set-mark start))))
 
-(global-set-key [(control shift down)] 'move-line-down)
+(defun move-region-up (start end n)
+  "Move the current line up by N lines."
+  (interactive "r\np")
+  (move-region start end (if (null n) -1 (- n))))
+
+(defun move-region-down (start end n)
+  "Move the current line down by N lines."
+  (interactive "r\np")
+  (move-region start end (if (null n) 1 n)))
+
+(defun move-line-region-up (start end n)
+  (interactive "r\np")
+  (if (region-active-p) (move-region-up start end n) (move-line-up n)))
+
+(defun move-line-region-down (start end n)
+  (interactive "r\np")
+  (if (region-active-p) (move-region-down start end n) (move-line-down n)))
 
 ;; add the ability to copy and cut the current line, without marking it
 (defadvice kill-ring-save (before slick-copy activate compile)

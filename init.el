@@ -23,6 +23,7 @@
 
 ;; programming & markup languages support
 (require 'lang-c)
+(require 'lang-dtrace)
 (require 'lang-js)
 (require 'lang-markdown)
 (require 'lang-perl)
@@ -34,3 +35,7 @@
   (mapc 'load (directory-files personal-dir nil "^[^#].*el$")))
 ;; config changes made through the customize UI will be store here
 (setq custom-file (concat personal-dir "custom.el"))
+
+;; extra stuff
+(autoload 'jira-mode "jira-mode" () t)
+(require 'jira)

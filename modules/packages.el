@@ -8,8 +8,7 @@
 
 ;; TODO find a way to get inf-ruby 2.2.2 into Marmalade
 (defvar packages
-  '(auctex coffee-mode deft gist magit markdown-mode paredit
-           js2-mode sass-mode scss-mode yaml-mode yari)
+  '(auctex magit markdown-mode paredit sass-mode scss-mode yaml-mode yari)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p packages)

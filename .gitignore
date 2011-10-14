@@ -1,1 +1,6 @@
 *.elc
+elpa
+auto-save-list
+eshell
+saveplace
+url

@@ -16,7 +16,7 @@
 ;; smart indenting and pairing for all
 (electric-pair-mode t)
 (electric-indent-mode t)
-(electric-layout-mode t)
+;(electric-layout-mode t)
 
 ;; show-paren-mode: subtle highlighting of matching parens
 (show-paren-mode t)

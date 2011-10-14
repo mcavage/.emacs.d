@@ -45,9 +45,21 @@
 ;; toggle menu-bar visibility
 (global-set-key (kbd "<f12>") 'menu-bar-mode)
 
+;; mimic popular IDEs binding, note that it doesn't work in a terminal session
+(global-set-key [(shift return)] 'insert-empty-line)
+
+(global-set-key "\M-g" 'goto-line)
+(global-set-key "\M-o" 'find-file)
+(global-set-key "\C-cc" 'comment-region)
+(global-set-key "\C-cu" 'uncomment-region)
+
 (global-set-key [(control up)] 'backward-paragraph)
 (global-set-key [(control down)] 'forward-paragraph)
 (global-set-key [(meta right)] 'forward-sexp)
 (global-set-key [(meta left)] 'backward-sexp)
 
-(provide 'keybindings)
+(global-set-key (kbd "M-<up>") 'move-line-region-up)
+(global-set-key (kbd "M-<down>") 'move-line-region-down)
+
+(provide 'keybindings
+)
