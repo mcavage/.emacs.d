@@ -13,6 +13,8 @@
 (add-to-list 'load-path modules-dir)
 (add-to-list 'load-path vendor-dir)
 (add-to-list 'load-path personal-dir)
+(add-to-list 'load-path (concat myemacs-dir "themes/solarized"))
+(require 'color-theme-solarized)
 
 ;; the core stuff
 (require 'ui)
@@ -35,7 +37,3 @@
   (mapc 'load (directory-files personal-dir nil "^[^#].*el$")))
 ;; config changes made through the customize UI will be store here
 (setq custom-file (concat personal-dir "custom.el"))
-
-;; extra stuff
-(autoload 'jira-mode "jira-mode" () t)
-(require 'jira)

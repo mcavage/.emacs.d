@@ -21,6 +21,4 @@
 (setq default-font "-apple-Consolas-medium-normal-normal-*-13-*-*-*-m-0-iso10646-1")
 (setq-default show-trailing-whitespace t)
 (fset 'yes-or-no-p 'y-or-n-p)
-(add-to-list 'custom-theme-load-path (concat myemacs-dir "themes/"))
-(load-theme 'zenburn t)
 (provide 'ui)
