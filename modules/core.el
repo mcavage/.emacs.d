@@ -266,7 +266,7 @@ there's a region, all lines that region covers will be duplicated."
 
 (defun coding-hook ()
   "Default coding hook, useful with any programming language."
-  (flyspell-prog-mode)
+  ;(flyspell-prog-mode)
   (local-comment-auto-fill)
   (turn-on-whitespace)
   (turn-on-abbrev)

@@ -4,7 +4,7 @@
 
 ;; Author: Bozhidar Batsov <bozhidar.batsov@gmail.com>
 ;; URL: http://github.com/bbatsov/solarized-emacs
-;; Version: 0.1
+;; Version: 0.2
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -134,7 +134,7 @@
      `(font-lock-comment-face ((,class (:foreground ,solarized-comments))))
      `(font-lock-comment-delimiter-face ((,class (:foreground ,solarized-comments))))
      `(font-lock-constant-face ((,class (:foreground ,blue))))
-     `(font-lock-doc-face ((,class (:foreground ,green))))
+     `(font-lock-doc-face ((,class (:foreground ,cyan))))
      `(font-lock-doc-string-face ((,class (:foreground ,blue))))
      `(font-lock-function-name-face ((,class (:foreground ,blue))))
      `(font-lock-keyword-face ((,class (:foreground ,green :weight bold))))
@@ -409,7 +409,7 @@
      `(whitespace-trailing ((,class (:foreground ,red :background ,solarized-bg))))
      `(whitespace-line ((,class (:background ,solarized-bg :foreground ,magenta))))
      `(whitespace-space-before-tab ((,class (:background ,orange :foreground ,orange))))
-     `(whitespace-indentation ((,class (:background ,yellow, :foreground ,red))))
+     `(whitespace-indentation ((,class (:background ,yellow :foreground ,red))))
      `(whitespace-empty ((,class (:background ,yellow :foreground ,red))))
      `(whitespace-space-after-tab ((,class (:background ,yellow :foreground ,red))))
 

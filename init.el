@@ -35,3 +35,19 @@
   (mapc 'load (directory-files personal-dir nil "^[^#].*el$")))
 ;; config changes made through the customize UI will be store here
 (setq custom-file (concat personal-dir "custom.el"))
+
+
+(defun set-js-indent-two()
+  (interactive)
+  (setq js-indent-level 2)
+  )
+
+(defun set-js-indent-four()
+  (interactive)
+  (setq js-indent-level 4)
+  )
+
+(global-set-key (kbd "C-c j 2") 'set-js-indent-two)
+(global-set-key (kbd "C-c j 4") 'set-js-indent-four)
+
+(setq enable-local-variables :all)

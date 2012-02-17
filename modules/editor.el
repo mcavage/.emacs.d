@@ -32,15 +32,15 @@
 ;; flyspell-mode
 (setq ispell-program-name "aspell" ; use aspell instead of ispell
       ispell-extra-args '("--sug-mode=ultra"))
-(autoload 'flyspell-mode "flyspell" "On-the-fly spelling checker." t)
+;;(autoload 'flyspell-mode "flyspell" "On-the-fly spelling checker." t)
 
-(defun turn-on-flyspell ()
-  "Force flyspell-mode on using a positive argument.  For use in hooks."
-  (interactive)
-  (flyspell-mode 1))
+;; (defun turn-on-flyspell ()
+;;   "Force flyspell-mode on using a positive argument.  For use in hooks."
+;;   (interactive)
+;;   (flyspell-mode 1))
 
-(add-hook 'message-mode-hook 'turn-on-flyspell)
-(add-hook 'text-mode-hook 'turn-on-flyspell)
+;; (add-hook 'message-mode-hook 'turn-on-flyspell)
+;; (add-hook 'text-mode-hook 'turn-on-flyspell)
 
 ;; enable narrow to region
 (put 'narrow-to-region 'disabled nil)
