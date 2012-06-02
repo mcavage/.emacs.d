@@ -83,121 +83,121 @@
      ;;
      ;; Variable names.
      (cons (regexp-opt
-	    '(
-	      "egid" "euid" "gid" "pid" "pgid" "ppid" "projid" "sid"
-	      "taskid" "uid") 'words)
-	   'font-lock-variable-name-face)
+	        '(
+		        "egid" "euid" "gid" "pid" "pgid" "ppid" "projid" "sid"
+			      "taskid" "uid") 'words)
+	      'font-lock-variable-name-face)
 
      ;;
      ;; DTrace built-in variables
      ;;
      (cons (regexp-opt
-	    '(
-	      "NULL"
-	      "arg0" "arg1" "arg2" "arg3" "arg4" "arg5" "arg6" "arg7"
-	      "arg8" "arg9" 
-	      "args" 
-	      "caller" 
-	      "chip"
-	      "cpu"
-	      "curcpu"
-	      "curlwpsinfo" 
-	      "curpsinfo" 
-	      "curthread"
-	      "cwd" 
-	      "epid" 
-	      "errno" 
-	      "execname" 
-	      "gid"
-	      "id" 
-	      "ipl"
-	      "lgrp"
-	      "pid"
-	      "ppid"
-	      "probefunc"
-	      "probemod" 
-	      "probename" 
-	      "probeprov"
-	      "pset"
-	      "pwd" 
-	      "root"
-	      "self" 
-	      "stackdepth"
-	      "this"
-	      "tid"
-	      "timestamp"
-	      "uid"
-	      "uregs"
-	      "vtimestamp"
-	      "walltimestamp"
-	      ) 'words)
-	   'font-lock-constant-face)
+	        '(
+		        "NULL"
+			      "arg0" "arg1" "arg2" "arg3" "arg4" "arg5" "arg6" "arg7"
+			            "arg8" "arg9" 
+				          "args" 
+					        "caller" 
+						      "chip"
+						            "cpu"
+							          "curcpu"
+								        "curlwpsinfo" 
+									      "curpsinfo" 
+									            "curthread"
+										          "cwd" 
+											        "epid" 
+												      "errno" 
+												            "execname" 
+													          "gid"
+														        "id" 
+															      "ipl"
+															            "lgrp"
+																          "pid"
+																	        "ppid"
+																		      "probefunc"
+																		            "probemod" 
+																			          "probename" 
+																				        "probeprov"
+																					      "pset"
+																					            "pwd" 
+																						          "root"
+																							        "self" 
+																								      "stackdepth"
+																								            "this"
+																									          "tid"
+																										        "timestamp"
+																											      "uid"
+																											            "uregs"
+																												          "vtimestamp"
+																													        "walltimestamp"
+																														      ) 'words)
+	      'font-lock-constant-face)
      ;;
      ;; DTrace functions.
      ;;
      (list (regexp-opt
-	    '(
-	      "alloca"
-	      "avg"
-	      "basename"
-	      "bcopy"
-	      "cleanpath"
-	      "commit"
-	      "copyin" 
-	      "copyinstr" 
-	      "copyinto"
-	      "copyout" 
-	      "copyoutstr" 
-	      "count"
-	      "dirname"
-	      "discard"
-	      "exit"
-	      "jstack"
-	      "lquantize"
-	      "max"
-	      "min" 
-	      "msgdsize"
-	      "msgsize"
-	      "mutex_owned" 
-	      "mutex_owner" 
-	      "mutex_type_adaptive"
-	      "mutex_type_spin"
-	      "offsetof" 
-	      "printa"
-	      "printf"
-	      "progenyof"
-	      "quantize"
-	      "raise" 
-	      "rand"
-	      "rand" 
-	      "rw_iswriter" 
-	      "rw_read_held" 
-	      "rw_write_held"
-	      "speculate"
-	      "speculation"
-	      "stack"
-	      "stop"
-	      "stringof"
-	      "strjoin"
-	      "strlen"
-	      "sum" 
-	      "system"
-	      "trace"
-	      "tracemem" 
-	      "trunc"
-	      "ustack"
-	      ) 'words)
-	   1 'font-lock-builtin-face)
+	        '(
+		        "alloca"
+			      "avg"
+			            "basename"
+				          "bcopy"
+					        "cleanpath"
+						      "commit"
+						            "copyin" 
+							          "copyinstr" 
+								        "copyinto"
+									      "copyout" 
+									            "copyoutstr" 
+										          "count"
+											        "dirname"
+												      "discard"
+												            "exit"
+													          "jstack"
+														        "lquantize"
+															      "max"
+															            "min" 
+																          "msgdsize"
+																	        "msgsize"
+																		      "mutex_owned" 
+																		            "mutex_owner" 
+																			          "mutex_type_adaptive"
+																				        "mutex_type_spin"
+																					      "offsetof" 
+																					            "printa"
+																						          "printf"
+																							        "progenyof"
+																								      "quantize"
+																								            "raise" 
+																									          "rand"
+																										        "rand" 
+																											      "rw_iswriter" 
+																											            "rw_read_held" 
+																												          "rw_write_held"
+																													        "speculate"
+																														      "speculation"
+																														            "stack"
+																															          "stop"
+																																        "stringof"
+																																	      "strjoin"
+																																	            "strlen"
+																																		          "sum" 
+																																			        "system"
+																																				      "trace"
+																																				            "tracemem" 
+																																					          "trunc"
+																																						        "ustack"
+																																							      ) 'words)
+	      1 'font-lock-builtin-face)
      ;;
      ;; Destructive actions
      ;;
      (list (regexp-opt
-	    '(
-	      "breakpoint"
-	      "chill"
-	      "panic"
-	      ) 'words)
-	   1 'font-lock-warning-face)
+	        '(
+		        "breakpoint"
+			      "chill"
+			            "panic"
+				          ) 'words)
+	      1 'font-lock-warning-face)
      ;;
      ;; DTrace providers
      ;;
@@ -251,7 +251,7 @@ Returns new value of point in all cases."
   (if (< arg 0) (forward-char 1))
   (and (/= arg 0)
        (re-search-backward "^[a-z_]+:.*$"
-			   nil 'move arg)
+			      nil 'move arg)
        (goto-char (1- (match-end 0))))
   (beginning-of-line))
 
@@ -267,20 +267,20 @@ With argument, repeat that many times; negative args move backward."
     (while (and (> arg 0) (< (point) (point-max)))
       (let ((pos (point)) npos)
 	(while (progn
-		(if (and first
-			 (progn
-			  (forward-char 1)
-			  (d-beginning-of-function 1)
-			  (not (bobp))))
-		    nil
-		  (or (bobp) (forward-char -1))
-		  (d-beginning-of-function -1))
-		(setq first nil)
-		(forward-list 1)
-		(skip-chars-forward " \t")
-		(if (looking-at "[#\n]")
-		    (forward-line 1))
-		(<= (point) pos))))
+		 (if (and first
+			   (progn
+			       (forward-char 1)
+			         (d-beginning-of-function 1)
+				   (not (bobp))))
+		         nil
+		     (or (bobp) (forward-char -1))
+		       (d-beginning-of-function -1))
+		 (setq first nil)
+		 (forward-list 1)
+		 (skip-chars-forward " \t")
+		 (if (looking-at "[#\n]")
+		         (forward-line 1))
+		 (<= (point) pos))))
       (setq arg (1- arg)))
     (while (< arg 0)
       (let ((pos (point)))
@@ -288,13 +288,13 @@ With argument, repeat that many times; negative args move backward."
 	(forward-sexp 1)
 	(forward-line 1)
 	(if (>= (point) pos)
-	    (if (progn (d-beginning-of-function 2) (not (bobp)))
-		(progn
-		  (forward-list 1)
-		  (skip-chars-forward " \t")
-		  (if (looking-at "[#\n]")
-		      (forward-line 1)))
-	      (goto-char (point-min)))))
+	        (if (progn (d-beginning-of-function 2) (not (bobp)))
+		    (progn
+		        (forward-list 1)
+			  (skip-chars-forward " \t")
+			    (if (looking-at "[#\n]")
+				      (forward-line 1)))
+		        (goto-char (point-min)))))
       (setq arg (1+ arg)))))
 
 (defun d-mark-function ()
