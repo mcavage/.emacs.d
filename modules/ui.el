@@ -1,0 +1,23 @@
+;(tool-bar-mode -1)
+(menu-bar-mode -1)
+(blink-cursor-mode -1)
+(line-number-mode t)
+(column-number-mode t)
+(setq visible-bell t)
+(setq scroll-step 1)
+(setq-default inhibit-startup-message t)
+(setq font-lock-maximum-decoration t)
+(setq query-replace-highlight t)
+(setq search-highlight t)
+;(size-indication-mode t)
+(setq inhibit-startup-screen t)
+(setq initial-scratch-message nil)
+
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+(prefer-coding-system 'utf-8)
+
+(setq-default show-trailing-whitespace t)
+(fset 'yes-or-no-p 'y-or-n-p)
+
+(provide 'ui)
