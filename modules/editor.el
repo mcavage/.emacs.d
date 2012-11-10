@@ -55,4 +55,12 @@
         ("Makefile"     . makefile-mode)
         ))
 
+(require 'fill-column-indicator)
+
+(defun my-enable-minor-modes ()
+  "Enables several minor modes."
+  (setq fci-rule-column 80)
+  (fci-mode 1))
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+(setq-default fill-column 80)
 (provide 'editor)

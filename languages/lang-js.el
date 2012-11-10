@@ -7,5 +7,6 @@
              (setq indent-tabs-mode nil)
              (setq js-auto-indent-flag nil)
              ))
+(add-hook 'js-mode-hook 'my-enable-minor-modes)
 
 (provide 'lang-js)
