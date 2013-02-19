@@ -5,7 +5,8 @@
     '(("M-<up>"        . "\M-[1;9A")
       ("M-<down>"      . "\M-[1;9B"))
     ))
-(when (string= system-type "usg-unix-v")
+(when (or (string= system-type "usg-unix-v")
+	  (string= system-type "gnu/linux"))
   (defvar real-keyboard-keys
     '(("M-<up>"         . "\M-[1;9A")
       ("M-<down>"      . "\M-[1;9B"))
