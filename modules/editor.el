@@ -49,7 +49,7 @@
         ("\\.hpp$"      . c++-mode)
         ("\\.awk$"      . awk-mode)
         ("\\.el$"       . emacs-lisp-mode)
-        ("\\.html$"     . html-mode)
+        ; ("\\.html$"     . html-mode)
         ("\\.xml$"      . xml-mode)
         ("\\.mk$"       . makefile-mode)
         ("Makefile"     . makefile-mode)
