@@ -1,5 +1,6 @@
 (defun myemacs-c-coding-hook ()
   (setq c-basic-offset 8)
+  (setq fill-colum 80)
   (myemacs-coding-hook))
 
 ;; this will affect all modes derived from cc-mode, like

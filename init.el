@@ -7,6 +7,10 @@
 (add-to-list 'load-path modules-dir)
 (add-to-list 'load-path vendor-dir)
 
+(if (fboundp 'pc-selection-mode)
+    (pc-selection-mode)
+  (require 'pc-select))
+
 (require 'core)
 (require 'editor)
 (require 'keybindings)
@@ -16,6 +20,7 @@
 (require 'lang-dtrace)
 (require 'lang-js)
 (require 'lang-markdown)
+(require 'lang-yaml)
 (require 'lang-xml)
 
 (require 'multi-web-mode)
@@ -61,3 +66,5 @@
 	  (kill-line 1)
 	  (setq sgml-xml-mode "binary1")))
       (set-buffer-modified-p nil))))
+
+(setq fill-colum 80)

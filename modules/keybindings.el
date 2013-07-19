@@ -1,16 +1,8 @@
 (when (string= system-type "darwin")
-  (setq mac-command-modifier 'super)
-  (setq mac-option-modifier 'meta)
-  (defvar real-keyboard-keys
-    '(("M-<up>"        . "\M-[1;9A")
-      ("M-<down>"      . "\M-[1;9B"))
-    ))
-(when (or (string= system-type "usg-unix-v")
-	  (string= system-type "gnu/linux"))
-  (defvar real-keyboard-keys
-    '(("M-<up>"         . "\M-[1;9A")
-      ("M-<down>"      . "\M-[1;9B"))
-    ))
+  (setq mac-command-modifier 'super))
+
+(define-key input-decode-map "\e\e[A" [(meta up)])
+(define-key input-decode-map "\e\e[B" [(meta down)])
 
 (global-set-key "\C-cs" 'shell)
 (global-set-key "\C-cg" 'grep)
@@ -23,13 +15,7 @@
 
 (global-set-key (read-kbd-macro "<M-DEL>") 'backward-delete-word)
 
-
-(define-key global-map (kbd "C-+") 'text-scale-increase)
-(define-key global-map (kbd "C--") 'text-scale-decrease)
-
-(define-key input-decode-map "\e\eOA" [(meta up)])
-(define-key input-decode-map "\e\eOB" [(meta down)])
-(global-set-key (key "M-<up>") 'move-line-region-up)
-(global-set-key (key "M-<down>") 'move-line-region-down)
+(global-set-key [(meta up)]  'move-line-region-up)
+(global-set-key [(meta down)]  'move-line-region-down)
 
 (provide 'keybindings)

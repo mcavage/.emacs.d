@@ -8,6 +8,7 @@
 (add-hook 'markdown-mode-hook
           '(lambda ()
              (setq indent-tabs-mode nil)
+	     (setq fill-colum 80)
              ))
 
 (provide 'lang-markdown)

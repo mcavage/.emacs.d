@@ -4,6 +4,7 @@
 (add-hook 'js-mode-hook
           '(lambda ()
              (setq js-indent-level 4)
+	     (setq fill-colum 80)
              (setq indent-tabs-mode nil)
              (setq js-auto-indent-flag nil)
              ))
