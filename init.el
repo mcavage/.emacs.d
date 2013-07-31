@@ -28,7 +28,7 @@
 (setq mweb-tags '((js-mode "<script.*>" "</script>")))
 (setq mweb-filename-extensions '("html"))
 (multi-web-global-mode 1)
-
+(delete-selection-mode 1)
 ;; Set files to TEXT mode so they automatically open in Emacs and can
 ;; be indexed by spotlight, and open & reconvert binary plists.
 ;; ron@18james.com, 16 Jun 2005

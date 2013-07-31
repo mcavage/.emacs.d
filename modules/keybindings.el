@@ -1,6 +1,7 @@
 (when (string= system-type "darwin")
   (setq mac-command-modifier 'super))
 
+(global-set-key [(control h)] 'delete-backward-char)
 (define-key input-decode-map "\e\e[A" [(meta up)])
 (define-key input-decode-map "\e\e[B" [(meta down)])
 
