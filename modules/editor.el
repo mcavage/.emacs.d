@@ -23,8 +23,13 @@
 (global-auto-revert-mode t)
 
 ;; like electric mode
-(require 'autopair)
-(autopair-global-mode)
+;; (require 'autopair)
+;; (autopair-global-mode)
+(defun electric-pair ()
+      "If at end of line, insert character pair without surrounding spaces.
+    Otherwise, just insert the typed character."
+      (interactive)
+      (if (eolp) (let (parens-require-spaces) (insert-pair)) (self-insert-command 1)))
 
 ;; show-paren-mode: subtle highlighting of matching parens
 (show-paren-mode t)

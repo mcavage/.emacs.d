@@ -25,7 +25,9 @@
 (defvar myemacs-dir (file-name-directory load-file-name))
 (defvar languages-dir (concat myemacs-dir "languages/"))
 (defvar modules-dir (concat myemacs-dir "modules/"))
+(defvar vendor-dir (concat myemacs-dir "site-lisp/"))
 
+(add-to-list 'load-path  vendor-dir)
 (add-to-list 'load-path languages-dir)
 (add-to-list 'load-path modules-dir)
 
